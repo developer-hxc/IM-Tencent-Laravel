@@ -13,6 +13,6 @@ class Facade extends LaravelFacade
      * @return string
      */
     protected static function getFacadeAccessor() {
-        return IMController::class;
+        return 'hxcim.tx';
     }
 }

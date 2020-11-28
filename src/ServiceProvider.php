@@ -23,10 +23,9 @@ class ServiceProvider extends LaravelServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(IMController::class,function($app){
+        $this->app->singleton('hxcim.tx',function($app){
             return new IMController();
         });
-        $this->app->alias(IMController::class,'HXCIM');
     
     }
 
@@ -35,6 +34,6 @@ class ServiceProvider extends LaravelServiceProvider
      */
     public function provides()
     {
-        return [IMController::class,'HXCIM'];
+        return ['hxcim.tx'];
     }
 }

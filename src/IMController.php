@@ -1,6 +1,6 @@
 <?php
 
-namespace HXC/IM;
+namespace HXC\IM;
 
 use HXC\IM\Gateway\Base;
 use HXC\IM\Provider\TX;
@@ -40,7 +40,7 @@ class IM
      */
     public function make($class)
     {
-        $class_name = '\HXC\Provider\\'.$class;
+        $class_name = '\HXC\IM\Provider\\'.$class;
 
         $app = new $class_name($this->config);
         if($app instanceof Base){
